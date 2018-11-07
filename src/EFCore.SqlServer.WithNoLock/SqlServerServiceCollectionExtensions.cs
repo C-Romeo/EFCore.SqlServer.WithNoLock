@@ -15,9 +15,9 @@ namespace Microsoft.EntityFrameworkCore
             if (sqlServerOptionsExtension == null)
                 return optionsBuilder;
 
-            optionsBuilder = optionsBuilder
+            return optionsBuilder
                 .ReplaceService<IQuerySqlGeneratorFactory, WithNoLockSqlServerQuerySqlGeneratorFactory>();
-            return optionsBuilder.ReplaceService<IMaterializerFactory, WithNoLockMaterializerFactory>();
+            //return optionsBuilder.ReplaceService<IMaterializerFactory, WithNoLockMaterializerFactory>();
         }
     }
 }
